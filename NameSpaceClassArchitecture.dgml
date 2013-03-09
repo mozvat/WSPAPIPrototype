@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @7 @17 @26)" Category="CodeSchema_Method" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="RootObject" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_Account OverloadingParameters=[(@2 @19 Type=Object)]))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_Account" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_AccountType @20))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_AccountType" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_Amount OverloadingParameters=[(@2 @19 Type=Object)]))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_Amount" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_InvoiceNo @20))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_InvoiceNo" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_OperatorId @20))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_OperatorId" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_RefNo @20))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_RefNo" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_TranCode OverloadingParameters=[(@2 @19 Type=String)]))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_TranCode" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_TranType OverloadingParameters=[(@2 @19 Type=String)]))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_TranType" />
+    <Node Id="(@1 @7 @17 Member=(Name=set_TransactionId @20))" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="set_TransactionId" />
+    <Node Id="(@1 @7 @17 Member=get_Account)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_Account" />
+    <Node Id="(@1 @7 @17 Member=get_AccountType)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_AccountType" />
+    <Node Id="(@1 @7 @17 Member=get_Amount)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_Amount" />
+    <Node Id="(@1 @7 @17 Member=get_InvoiceNo)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_InvoiceNo" />
+    <Node Id="(@1 @7 @17 Member=get_OperatorId)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_OperatorId" />
+    <Node Id="(@1 @7 @17 Member=get_RefNo)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_RefNo" />
+    <Node Id="(@1 @7 @17 Member=get_TranCode)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_TranCode" />
+    <Node Id="(@1 @7 @17 Member=get_TranType)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_TranType" />
+    <Node Id="(@1 @7 @17 Member=get_TransactionId)" Category="CodeSchema_Method" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="get_TransactionId" />
+    <Node Id="(@1 @7 @9 Member=(Name=Dispose OverloadingParameters=[(@2 @19 Type=Boolean)]))" Category="CodeSchema_Method" CodeSchemaProperty_IsProtected="True" Label="Dispose" />
+    <Node Id="(@1 @7 Type=Gift @26)" Category="CodeSchema_Method" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="Gift" />
+    <Node Id="(@1 @7 Type=Gift @30)" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="Process" />
+    <Node Id="(@1 @7 Type=HostedCheckOut @26)" Category="CodeSchema_Method" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="HostedCheckOut" />
+    <Node Id="(@1 @7 Type=HostedCheckOut @30)" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="Process" />
+    <Node Id="(@1 @7 Type=IProcess @30)" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="Process" />
+    <Node Id="(@1 @7 Type=Loyalty @26)" Category="CodeSchema_Method" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="Loyalty" />
+    <Node Id="(@1 @7 Type=Loyalty @30)" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="Process" />
+    <Node Id="(@1 @7 Type=Payment @26)" Category="CodeSchema_Method" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="Payment" />
+    <Node Id="(@1)" Category="CodeSchema_Assembly" Visibility="Hidden" />
+    <Node Id="(@2)" Category="CodeSchema_Assembly" Visibility="Hidden" />
+    <Node Id="(@3)" Category="CodeSchema_Assembly" Visibility="Hidden" />
+    <Node Id="(@4)" Category="CodeSchema_Assembly" Visibility="Hidden" />
+    <Node Id="(@5)" Category="CodeSchema_Assembly" Visibility="Hidden" />
+    <Node Id="(@6)" Category="CodeSchema_Assembly" Visibility="Hidden" />
+    <Node Id="@10" Category="CodeSchema_Class" CodeSchemaProperty_IsPublic="True" Group="Collapsed" Label="frmMain" />
+    <Node Id="@11" Category="CodeSchema_Class" CodeSchemaProperty_IsPrivate="True" Group="Collapsed" Label="Gift" />
+    <Node Id="@12" Category="CodeSchema_Class" CodeSchemaProperty_IsPrivate="True" Group="Collapsed" Label="HostedCheckOut" />
+    <Node Id="@13" Category="CodeSchema_Interface" CodeSchemaProperty_IsPrivate="True" Group="Collapsed" Label="IProcess" />
+    <Node Id="@14" Category="CodeSchema_Class" CodeSchemaProperty_IsPrivate="True" Group="Collapsed" Label="Loyalty" />
+    <Node Id="@15" Category="CodeSchema_Class" CodeSchemaProperty_IsPublic="True" Group="Expanded" Label="Payment" />
+    <Node Id="@16" Category="CodeSchema_Class" CodeSchemaProperty_IsPrivate="True" Group="Collapsed" Label="Program" />
+    <Node Id="@18" Category="CodeSchema_Class" CodeSchemaProperty_IsPublic="True" Group="Collapsed" Label="RootObject" />
+    <Node Id="@22" Category="CodeSchema_Method" CodeSchemaProperty_IsPrivate="True" Label="btnGift_Click" />
+    <Node Id="@23" Category="CodeSchema_Method" CodeSchemaProperty_IsPrivate="True" Label="btnHostedCheckout_Click" />
+    <Node Id="@24" Category="CodeSchema_Method" CodeSchemaProperty_IsPrivate="True" Label="btnLoyalty_Click" />
+    <Node Id="@25" Category="CodeSchema_Method" CodeSchemaProperty_IsPrivate="True" Label="btnPayment_Click" />
+    <Node Id="@27" Category="CodeSchema_Method" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" Label="frmMain" />
+    <Node Id="@28" Category="CodeSchema_Method" CodeSchemaProperty_IsPrivate="True" Label="InitializeComponent" />
+    <Node Id="@29" Category="CodeSchema_Method" CodeSchemaProperty_IsPrivate="True" Label="Main" />
+    <Node Id="@31" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="Process" />
+    <Node Id="@8" Category="CodeSchema_Namespace" Group="Expanded" Label="WSPAPIPrototype" />
+  </Nodes>
+  <Links>
+    <Link Source="(@1)" Target="@8" Category="Contains" />
+    <Link Source="@10" Target="(@1 @7 @9 Member=(Name=Dispose OverloadingParameters=[(@2 @19 Type=Boolean)]))" Category="Contains" />
+    <Link Source="@10" Target="@22" Category="Contains" />
+    <Link Source="@10" Target="@23" Category="Contains" />
+    <Link Source="@10" Target="@24" Category="Contains" />
+    <Link Source="@10" Target="@25" Category="Contains" />
+    <Link Source="@10" Target="@27" Category="Contains" />
+    <Link Source="@10" Target="@28" Category="Contains" />
+    <Link Source="@11" Target="(@1 @7 Type=Gift @26)" Category="Contains" />
+    <Link Source="@11" Target="(@1 @7 Type=Gift @30)" Category="Contains" />
+    <Link Source="@11" Target="@13" Category="Implements" />
+    <Link Source="@12" Target="(@1 @7 Type=HostedCheckOut @26)" Category="Contains" />
+    <Link Source="@12" Target="(@1 @7 Type=HostedCheckOut @30)" Category="Contains" />
+    <Link Source="@12" Target="@13" Category="Implements" />
+    <Link Source="@13" Target="(@1 @7 Type=IProcess @30)" Category="Contains" />
+    <Link Source="@14" Target="(@1 @7 Type=Loyalty @26)" Category="Contains" />
+    <Link Source="@14" Target="(@1 @7 Type=Loyalty @30)" Category="Contains" />
+    <Link Source="@14" Target="@13" Category="Implements" />
+    <Link Source="@15" Target="(@1 @7 Type=Payment @26)" Category="Contains" />
+    <Link Source="@15" Target="@13" Category="Implements" />
+    <Link Source="@15" Target="@31" Category="Contains" />
+    <Link Source="@16" Target="@29" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 @26)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_Account OverloadingParameters=[(@2 @19 Type=Object)]))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_AccountType @20))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_Amount OverloadingParameters=[(@2 @19 Type=Object)]))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_InvoiceNo @20))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_OperatorId @20))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_RefNo @20))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_TranCode OverloadingParameters=[(@2 @19 Type=String)]))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_TranType OverloadingParameters=[(@2 @19 Type=String)]))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=(Name=set_TransactionId @20))" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_Account)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_AccountType)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_Amount)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_InvoiceNo)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_OperatorId)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_RefNo)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_TranCode)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_TranType)" Category="Contains" />
+    <Link Source="@18" Target="(@1 @7 @17 Member=get_TransactionId)" Category="Contains" />
+    <Link Source="@27" Target="@28" Category="CodeSchema_Calls" />
+    <Link Source="@28" Target="@22" Category="CodeSchema_FunctionPointer" />
+    <Link Source="@28" Target="@23" Category="CodeSchema_FunctionPointer" />
+    <Link Source="@28" Target="@24" Category="CodeSchema_FunctionPointer" />
+    <Link Source="@28" Target="@25" Category="CodeSchema_FunctionPointer" />
+    <Link Source="@29" Target="@27" Category="CodeSchema_Calls" />
+    <Link Source="@31" Target="@18" Category="References" />
+    <Link Source="@8" Target="@10" Category="Contains" />
+    <Link Source="@8" Target="@11" Category="Contains" />
+    <Link Source="@8" Target="@12" Category="Contains" />
+    <Link Source="@8" Target="@13" Category="Contains" />
+    <Link Source="@8" Target="@14" Category="Contains" />
+    <Link Source="@8" Target="@15" Category="Contains" />
+    <Link Source="@8" Target="@16" Category="Contains" />
+    <Link Source="@8" Target="@18" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" IsProviderRoot="False" NavigationActionLabel="Assemblies" />
+    <Category Id="CodeSchema_Block" Label="Block" BasedOn="CodeSchema_Statement" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" IsProviderRoot="False" NavigationActionLabel="Blocks" />
+    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" IsProviderRoot="False" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_FunctionPointer" Label="Function Pointer" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Function Pointers" OutgoingActionLabel="Function Pointers" />
+    <Category Id="CodeSchema_Interface" Label="Interface" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Interface" IsProviderRoot="False" NavigationActionLabel="Interfaces" />
+    <Category Id="CodeSchema_Member" Label="Member" BasedOn="CodeSchema_Block" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" IsProviderRoot="False" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" IsProviderRoot="False" NavigationActionLabel="Methods" />
+    <Category Id="CodeSchema_Namespace" Label="Namespace" BasedOn="CodeSchema_Block" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" IsProviderRoot="False" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_Statement" Label="Statement" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" IsProviderRoot="False" NavigationActionLabel="Statement" />
+    <Category Id="CodeSchema_Type" Label="Type" BasedOn="CodeSchema_Block" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" IsProviderRoot="False" NavigationActionLabel="Types" />
+    <Category Id="Contains" Label="Contains" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" IsProviderRoot="False" NavigationActionLabel="Files" />
+    <Category Id="Implements" Label="Implements" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Implemented by" OutgoingActionLabel="Implements" />
+    <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+  </Categories>
+  <Properties>
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsCompilerGenerated" Label="IsCompilerGenerated" Description="IsCompilerGenerated" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="IsConstructor" Description="IsConstructor" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="IsPrivate" Description="IsPrivate" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsProtected" Label="IsProtected" Description="IsProtected" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="IsPublic" Description="IsPublic" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsSpecialName" Label="IsSpecialName" Description="IsSpecialName" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.Progression.GraphModel.GroupStyle" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.Progression.GraphModel.QualifiedIdentifierArrayCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#1C3068" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#4A65A0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Type" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#D3DCEF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Generics" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Generics')" />
+      <Setter Property="Background" Value="#FFA080A0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FFA08080" />
+    </Style>
+  </Styles>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(6aebf4f6-fc94-4af3-a0d4-74e5bbe90cdd.OutputPathUri)" />
+    <Alias n="2" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll" />
+    <Alias n="3" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/System.Drawing.dll" />
+    <Alias n="4" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/System.dll" />
+    <Alias n="5" Uri="Assembly=$(PersonalUri)/JSON.net/Newtonsoft.Json.dll" />
+    <Alias n="6" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/System.Windows.Forms.dll" />
+    <Alias n="7" Id="Namespace=WSPAPIPrototype" />
+    <Alias n="8" Id="(@7)" />
+    <Alias n="9" Id="Type=frmMain" />
+    <Alias n="10" Id="(@1 @7 @9)" />
+    <Alias n="11" Id="(@1 @7 Type=Gift)" />
+    <Alias n="12" Id="(@1 @7 Type=HostedCheckOut)" />
+    <Alias n="13" Id="(@1 @7 Type=IProcess)" />
+    <Alias n="14" Id="(@1 @7 Type=Loyalty)" />
+    <Alias n="15" Id="(@1 @7 Type=Payment)" />
+    <Alias n="16" Id="(@1 @7 Type=Program)" />
+    <Alias n="17" Id="Type=RootObject" />
+    <Alias n="18" Id="(@1 @7 @17)" />
+    <Alias n="19" Id="Namespace=System" />
+    <Alias n="20" Id="OverloadingParameters=[(@2 @19 Type=Int32)]" />
+    <Alias n="21" Id="OverloadingParameters=[(@2 @19 Type=Object),(@2 @19 Type=EventArgs)]" />
+    <Alias n="22" Id="(@1 @7 @9 Member=(Name=btnGift_Click @21))" />
+    <Alias n="23" Id="(@1 @7 @9 Member=(Name=btnHostedCheckout_Click @21))" />
+    <Alias n="24" Id="(@1 @7 @9 Member=(Name=btnLoyalty_Click @21))" />
+    <Alias n="25" Id="(@1 @7 @9 Member=(Name=btnPayment_Click @21))" />
+    <Alias n="26" Id="Member=.ctor" />
+    <Alias n="27" Id="(@1 @7 @9 @26)" />
+    <Alias n="28" Id="(@1 @7 @9 Member=InitializeComponent)" />
+    <Alias n="29" Id="(@1 @7 Type=Program Member=Main)" />
+    <Alias n="30" Id="Member=Process" />
+    <Alias n="31" Id="(@1 @7 Type=Payment @30)" />
+  </IdentifierAliases>
+  <Paths>
+    <Path Id="6aebf4f6-fc94-4af3-a0d4-74e5bbe90cdd.OutputPathUri" Value="file:///c:/users/matthew ozvat/documents/visual studio 2010/Projects/WSPAPIPrototype/WSPAPIPrototype/bin/Debug/WSPAPIPrototype.exe" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files/Reference Assemblies/Microsoft/Framework" />
+    <Path Id="PersonalUri" Value="file:///C:/Users/Matthew Ozvat/Documents" />
+  </Paths>
+</DirectedGraph>
