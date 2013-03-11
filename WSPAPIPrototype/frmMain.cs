@@ -20,7 +20,8 @@ namespace WSPAPIPrototype
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-
+            Payment payment = new Payment();
+            payment.Process();
         }
 
         private void btnHostedCheckout_Click(object sender, EventArgs e)
