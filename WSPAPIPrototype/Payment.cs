@@ -14,16 +14,58 @@ namespace WSPAPIPrototype
         {
             PostTransaction();
             GetTransaction();
+            DeleteTransaction();
+
+            PostBatch();
+            GetBatch();
         }
 
 
+        /// <summary>
+        /// Delete an individual Transaction: Reversal/Void?
+        /// </summary>
+        private static void DeleteTransaction()
+        {
+            //TODO https://github.com/mozvat/WSPAPIPrototype/issues/9
+            //How do we handle all the different Return/Voids with and without a cardswipe.
+            var result = string.Empty;
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a&InvoiceNum=1234");
+            httpWebRequest.ContentType = "text/json";
+            httpWebRequest.Method = "DELETE";
+            var response = (HttpWebResponse)httpWebRequest.GetResponse();
 
-        //GET
+            using (var sr = new StreamReader(response.GetResponseStream()))
+            {
+                result = sr.ReadToEnd();
+            }
+        }
+
+
+        /// <summary>
+        /// Posts a Batch
+        /// </summary>
+        private static void PostBatch()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Get a Batch
+        /// </summary>
+        private static void GetBatch()
+        {
+
+        }
+
+        /// <summary>
+        /// Get an individual tender transaction
+        /// </summary>
         private static void GetTransaction()
         {
             //TODO https://github.com/mozvat/WSPAPIPrototype/issues/8
             var result = string.Empty;
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a&MerchantID=1234");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a&MerchantID=1234&InvoiceNum=1234");
             httpWebRequest.ContentType = "text/json";
             httpWebRequest.Method = WebRequestMethods.Http.Get;
             var response = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -35,7 +77,9 @@ namespace WSPAPIPrototype
         }
 
 
-        //POST
+        /// <summary>
+        /// Post an individual tender transaction
+        /// </summary>
         private static void PostTransaction()
         {
             //TODO https://github.com/mozvat/WSPAPIPrototype/issues/6
