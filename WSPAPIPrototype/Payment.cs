@@ -15,7 +15,6 @@ namespace WSPAPIPrototype
             PostTransaction();
             GetTransaction();
             DeleteTransaction();
-
             PostBatch();
             GetBatch();
         }
@@ -46,7 +45,26 @@ namespace WSPAPIPrototype
         /// </summary>
         private static void PostBatch()
         {
+            var result = string.Empty;
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Batches?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a");
+            httpWebRequest.ContentType = "text/json";
+            httpWebRequest.Method = "POST";
 
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+
+                string json = "{\"IpAddress\":\"1.1.1.1\",\"IpPort\":\"80\", \"MerchantId\":\"1234\", \"TerminalId\":\"1234\", \"OperatorId\":\"123\",\"TranCode\":\"0\", \"SequenceNo\":\"5499****\",\"TerminalName\":\"69\",\"ShiftId\":\"12345\",\"Signature\":\"Sig\"}";
+
+                streamWriter.Write(json);
+                streamWriter.Flush();
+                streamWriter.Close();
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    result = streamReader.ReadToEnd();
+                }
+            }
         }
 
 
@@ -55,7 +73,17 @@ namespace WSPAPIPrototype
         /// </summary>
         private static void GetBatch()
         {
+            //TODO https://github.com/mozvat/WSPAPIPrototype/issues/10
+            var result = string.Empty;
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Batches?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a&MerchantID=1234");
+            httpWebRequest.ContentType = "text/json";
+            httpWebRequest.Method = WebRequestMethods.Http.Get;
+            var response = (HttpWebResponse)httpWebRequest.GetResponse();
 
+            using (var sr = new StreamReader(response.GetResponseStream()))
+            {
+                result = sr.ReadToEnd();
+            }
         }
 
         /// <summary>
