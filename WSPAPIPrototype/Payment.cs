@@ -12,6 +12,11 @@ namespace WSPAPIPrototype
 
         public void Process()
         {
+            CardPresent();
+        }
+
+        private static void CardPresent()
+        {
             var result = string.Empty;
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a");
             httpWebRequest.ContentType = "text/json";
@@ -20,7 +25,7 @@ namespace WSPAPIPrototype
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
 
-                string json = "{\"TransactionId\":\"0\",\"OperatorId\":\"0\", \"TranType\":\"Credit\", \"TranCode\":\"Sale\", \"InvoiceNo\":\"123\",\"RefNo\":\"0\", \"Account\":\"5499****\",\"Amount\":\"69\"}";
+                string json = "{\"TransactionId\":\"0\",\"OperatorId\":\"0\", \"TranType\":\"Credit\", \"TranCode\":\"Sale\", \"InvoiceNo\":\"123\",\"RefNo\":\"0\", \"Account\":\"5499****\",\"Amount\":\"69\",\"EXPDate\":\"MMYY\",\"CVV\":\"123\",\"AVS\":\"1 East 6th Avenue\"}";
 
                 streamWriter.Write(json);
                 streamWriter.Flush();
@@ -42,14 +47,20 @@ namespace WSPAPIPrototype
 
     public class RootObject
     {
+        //TODO https://github.com/mozvat/WSPAPIPrototype/issues/6
         public int TransactionId { get; set; }
+        //TODO Remove OperatorID property
         public int OperatorId { get; set; }
         public string TranType { get; set; }
         public string TranCode { get; set; }
         public int InvoiceNo { get; set; }
+        //TODO Remove RefNo property
         public int RefNo { get; set; }
         public object Account { get; set; }
         public int AccountType { get; set; }
         public object Amount { get; set; }
+        //TODO Add EXP
+        //TODO Add CVV
+        //TODO Add AVS
     }
 }
