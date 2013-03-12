@@ -12,11 +12,33 @@ namespace WSPAPIPrototype
 
         public void Process()
         {
-            CardPresent();
+            PostTransaction();
+            GetTransaction();
         }
 
-        private static void CardPresent()
+
+
+        //GET
+        private static void GetTransaction()
         {
+            //TODO https://github.com/mozvat/WSPAPIPrototype/issues/8
+            var result = string.Empty;
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a&MerchantID=1234");
+            httpWebRequest.ContentType = "text/json";
+            httpWebRequest.Method = WebRequestMethods.Http.Get;
+            var response = (HttpWebResponse)httpWebRequest.GetResponse();
+
+            using (var sr = new StreamReader(response.GetResponseStream()))
+            {
+                result = sr.ReadToEnd();
+            }
+        }
+
+
+        //POST
+        private static void PostTransaction()
+        {
+            //TODO https://github.com/mozvat/WSPAPIPrototype/issues/6
             var result = string.Empty;
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a");
             httpWebRequest.ContentType = "text/json";
