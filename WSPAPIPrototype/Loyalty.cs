@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Runtime.Serialization.Json;
 using Newtonsoft.Json;
 
 namespace WSPAPIPrototype
@@ -54,7 +55,8 @@ namespace WSPAPIPrototype
         /// <returns></returns>
         private Credit GetCredits()
         {
-            string result;
+            Credit credit;
+
             var httpWebRequest =
                 (HttpWebRequest)
                 WebRequest.Create(
@@ -65,10 +67,11 @@ namespace WSPAPIPrototype
             var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                result = streamReader.ReadToEnd();
+                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Credit));
+                credit = (Credit)ser.ReadObject(streamReader.BaseStream);
             }
 
-            return Credit.GetCredit(result);
+            return credit;
         }
     }
 
@@ -106,17 +109,7 @@ namespace WSPAPIPrototype
         {
             return JsonConvert.SerializeObject(this, Formatting.None,
                                                new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
-        }
-
-        /// <summary>
-        /// Gets the credit.
-        /// </summary>
-        /// <param name="jsonString">The json string.</param>
-        /// <returns></returns>
-        public static Credit GetCredit(string jsonString)
-        {
-            return JsonConvert.DeserializeObject<Credit>(@jsonString);            
-        }
+        }        
 
         /// <summary>
         /// Gets or sets the customer identifier.
