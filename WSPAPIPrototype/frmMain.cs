@@ -29,6 +29,12 @@ namespace WSPAPIPrototype
 
         }
 
+        private void btnLoyaltyCredit_Click(object sender, EventArgs e)
+        {
+            Loyalty loyalty = new Loyalty();
+            loyalty.Process();
+        }
+
         private void btnLoyalty_Click(object sender, EventArgs e)
         {
 
@@ -39,6 +45,4 @@ namespace WSPAPIPrototype
 
         }
     }
-
-
 }

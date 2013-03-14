@@ -9,3 +9,13 @@ c:\users\matthew ozvat\documents\visual studio 2010\Projects\WSPAPIPrototype\WSP
 c:\users\matthew ozvat\documents\visual studio 2010\Projects\WSPAPIPrototype\WSPAPIPrototype\bin\Debug\Newtonsoft.Json.dll
 c:\users\matthew ozvat\documents\visual studio 2010\Projects\WSPAPIPrototype\WSPAPIPrototype\bin\Debug\Newtonsoft.Json.xml
 c:\users\matthew ozvat\documents\visual studio 2010\Projects\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\WSPAPIPrototype.frmMain.resources
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\WSPAPIPrototype.exe
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\WSPAPIPrototype.pdb
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\bin\Debug\WSPAPIPrototype.exe
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\bin\Debug\WSPAPIPrototype.pdb
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\WSPAPIPrototype.frmMain.resources
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\WSPAPIPrototype.Properties.Resources.resources
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\GenerateResource.write.1.tlog
