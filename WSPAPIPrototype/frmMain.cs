@@ -31,7 +31,8 @@ namespace WSPAPIPrototype
 
         private void btnLoyalty_Click(object sender, EventArgs e)
         {
-
+            Loyalty loyalty = new Loyalty();
+            loyalty.Process();
         }
 
         private void btnGift_Click(object sender, EventArgs e)
