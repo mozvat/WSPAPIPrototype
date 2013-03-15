@@ -30,8 +30,9 @@
         {
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnGift = new System.Windows.Forms.Button();
-            this.btnLoyalty = new System.Windows.Forms.Button();
+            this.btnLoyaltyCredit = new System.Windows.Forms.Button();
             this.btnHostedCheckout = new System.Windows.Forms.Button();
+            this.btnLoyalty = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPayment
@@ -54,19 +55,19 @@
             this.btnGift.UseVisualStyleBackColor = true;
             this.btnGift.Click += new System.EventHandler(this.btnGift_Click);
             // 
-            // btnLoyalty
+            // btnLoyaltyCredit
             // 
-            this.btnLoyalty.Location = new System.Drawing.Point(56, 206);
-            this.btnLoyalty.Name = "btnLoyalty";
-            this.btnLoyalty.Size = new System.Drawing.Size(163, 70);
-            this.btnLoyalty.TabIndex = 2;
-            this.btnLoyalty.Text = "&Loyalty";
-            this.btnLoyalty.UseVisualStyleBackColor = true;
-            this.btnLoyalty.Click += new System.EventHandler(this.btnLoyalty_Click);
+            this.btnLoyaltyCredit.Location = new System.Drawing.Point(56, 206);
+            this.btnLoyaltyCredit.Name = "btnLoyaltyCredit";
+            this.btnLoyaltyCredit.Size = new System.Drawing.Size(163, 70);
+            this.btnLoyaltyCredit.TabIndex = 2;
+            this.btnLoyaltyCredit.Text = "Loyalty &Credit";
+            this.btnLoyaltyCredit.UseVisualStyleBackColor = true;
+            this.btnLoyaltyCredit.Click += new System.EventHandler(this.btnLoyaltyCredit_Click);
             // 
             // btnHostedCheckout
             // 
-            this.btnHostedCheckout.Location = new System.Drawing.Point(56, 282);
+            this.btnHostedCheckout.Location = new System.Drawing.Point(56, 358);
             this.btnHostedCheckout.Name = "btnHostedCheckout";
             this.btnHostedCheckout.Size = new System.Drawing.Size(163, 70);
             this.btnHostedCheckout.TabIndex = 3;
@@ -74,13 +75,24 @@
             this.btnHostedCheckout.UseVisualStyleBackColor = true;
             this.btnHostedCheckout.Click += new System.EventHandler(this.btnHostedCheckout_Click);
             // 
+            // btnLoyalty
+            // 
+            this.btnLoyalty.Location = new System.Drawing.Point(56, 282);
+            this.btnLoyalty.Name = "btnLoyalty";
+            this.btnLoyalty.Size = new System.Drawing.Size(163, 70);
+            this.btnLoyalty.TabIndex = 4;
+            this.btnLoyalty.Text = "&Loyalty";
+            this.btnLoyalty.UseVisualStyleBackColor = true;
+            this.btnLoyalty.Click += new System.EventHandler(this.btnLoyalty_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 394);
-            this.Controls.Add(this.btnHostedCheckout);
+            this.ClientSize = new System.Drawing.Size(284, 554);
             this.Controls.Add(this.btnLoyalty);
+            this.Controls.Add(this.btnHostedCheckout);
+            this.Controls.Add(this.btnLoyaltyCredit);
             this.Controls.Add(this.btnGift);
             this.Controls.Add(this.btnPayment);
             this.Name = "frmMain";
@@ -93,8 +105,9 @@
 
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnGift;
-        private System.Windows.Forms.Button btnLoyalty;
+        private System.Windows.Forms.Button btnLoyaltyCredit;
         private System.Windows.Forms.Button btnHostedCheckout;
+        private System.Windows.Forms.Button btnLoyalty;
     }
 }
 
