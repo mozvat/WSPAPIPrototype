@@ -19,3 +19,4 @@ C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug
 C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\WSPAPIPrototype.Properties.Resources.resources
 C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\jsermini\Documents\GitHub\WSPAPIPrototype\WSPAPIPrototype\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Matthew Ozvat\Documents\Visual Studio 2010\Projects\WSPAPIPrototype\WSPAPIPrototype\bin\Debug\WSPAPIPrototype.exe.config

@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 554);
+            this.ClientSize = new System.Drawing.Size(284, 460);
             this.Controls.Add(this.btnLoyalty);
             this.Controls.Add(this.btnHostedCheckout);
             this.Controls.Add(this.btnLoyaltyCredit);
@@ -97,6 +97,7 @@
             this.Controls.Add(this.btnPayment);
             this.Name = "frmMain";
             this.Text = "API Prototype";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
 
         }

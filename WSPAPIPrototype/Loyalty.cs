@@ -23,7 +23,7 @@ namespace WSPAPIPrototype
         /// <summary>
         /// Posts the credits.
         /// </summary>
-        private void PostCredits()
+        public static void PostCredits()
         {
             var httpWebRequest =
                 (HttpWebRequest)
@@ -34,7 +34,7 @@ namespace WSPAPIPrototype
 
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-                string json = new Credit().GetJson();
+                string json = new Points().GetJson();
 
                 streamWriter.Write(json);
                 streamWriter.Flush();
@@ -53,9 +53,9 @@ namespace WSPAPIPrototype
         /// Gets the credits.
         /// </summary>
         /// <returns></returns>
-        private Credit GetCredits()
+        public Points GetCredits()
         {
-            Credit credit;
+            Points credit;
 
             var httpWebRequest =
                 (HttpWebRequest)
@@ -67,8 +67,8 @@ namespace WSPAPIPrototype
             var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Credit));
-                credit = (Credit)ser.ReadObject(streamReader.BaseStream);
+                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Points));
+                credit = (Points)ser.ReadObject(streamReader.BaseStream);
             }
 
             return credit;
@@ -78,22 +78,26 @@ namespace WSPAPIPrototype
     /// <summary>
     /// Credit type
     /// </summary>
-    public class Credit
+    public class Points
     {
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Credit" /> class. Just throw some data in to test with.
         /// </summary>
-        public Credit()
+        /// 
+        public Points()
         {
+            //TODO Credit because it is being used as a TranType in a Credit card 'Sale', this may be a confusing  noun.
             CustomerIdentifier = 1;
             Description = "POS Purchase";
             EmployeeId = 1;
             StationId = 1;
             TicketId = 123;
             Revenue = 101.10;
+            //TODO What is the Card Number?
             CardNumber = "1234123412341234";
             Language = "en-us";
+            //TODO What is this version?
             Version = "1.0";
             Delay = 1;
             TestMode = false;

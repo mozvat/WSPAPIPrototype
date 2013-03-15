@@ -44,5 +44,17 @@ namespace WSPAPIPrototype
         {
 
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+            //Get credit sale approval
+            Payment.PostTransaction();
+            //Update Loyalty credit
+            Loyalty.PostCredits();
+
+
+
+        }
     }
 }

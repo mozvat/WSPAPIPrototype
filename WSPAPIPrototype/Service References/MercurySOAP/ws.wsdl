@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.mercurypay.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.mercurypay.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.mercurypay.com">
+      <s:element name="CBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CBatchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowRunAsDebit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowRunAsDebitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AllowRunAsDebitResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CTranDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoice" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CTranDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CTranDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAllDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAllDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CAllDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAllDetailEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactioncode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAllDetailExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CAllDetailExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAllGiftDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAllGiftDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CAllGiftDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreditTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tran" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreditTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GiftTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tran" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GiftTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GiftTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoyaltyTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tran" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoyaltyTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoyaltyTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssociateAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identifier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssociateAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssociateAccountResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveAccountAssociation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identifier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveAccountAssociationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemoveAccountAssociationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Lookup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tran" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LookupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LookupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:CBatch" />
+  </wsdl:message>
+  <wsdl:message name="CBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:CBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllowRunAsDebitSoapIn">
+    <wsdl:part name="parameters" element="tns:AllowRunAsDebit" />
+  </wsdl:message>
+  <wsdl:message name="AllowRunAsDebitSoapOut">
+    <wsdl:part name="parameters" element="tns:AllowRunAsDebitResponse" />
+  </wsdl:message>
+  <wsdl:message name="CTranDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:CTranDetail" />
+  </wsdl:message>
+  <wsdl:message name="CTranDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:CTranDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CAllDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:CAllDetail" />
+  </wsdl:message>
+  <wsdl:message name="CAllDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:CAllDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CAllDetailExSoapIn">
+    <wsdl:part name="parameters" element="tns:CAllDetailEx" />
+  </wsdl:message>
+  <wsdl:message name="CAllDetailExSoapOut">
+    <wsdl:part name="parameters" element="tns:CAllDetailExResponse" />
+  </wsdl:message>
+  <wsdl:message name="CAllGiftDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:CAllGiftDetail" />
+  </wsdl:message>
+  <wsdl:message name="CAllGiftDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:CAllGiftDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreditTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CreditTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreditTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GiftTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GiftTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GiftTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GiftTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoyaltyTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:LoyaltyTransaction" />
+  </wsdl:message>
+  <wsdl:message name="LoyaltyTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:LoyaltyTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssociateAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AssociateAccount" />
+  </wsdl:message>
+  <wsdl:message name="AssociateAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AssociateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveAccountAssociationSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveAccountAssociation" />
+  </wsdl:message>
+  <wsdl:message name="RemoveAccountAssociationSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveAccountAssociationResponse" />
+  </wsdl:message>
+  <wsdl:message name="LookupSoapIn">
+    <wsdl:part name="parameters" element="tns:Lookup" />
+  </wsdl:message>
+  <wsdl:message name="LookupSoapOut">
+    <wsdl:part name="parameters" element="tns:LookupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsSoap">
+    <wsdl:operation name="CBatch">
+      <wsdl:input message="tns:CBatchSoapIn" />
+      <wsdl:output message="tns:CBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllowRunAsDebit">
+      <wsdl:input message="tns:AllowRunAsDebitSoapIn" />
+      <wsdl:output message="tns:AllowRunAsDebitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CTranDetail">
+      <wsdl:input message="tns:CTranDetailSoapIn" />
+      <wsdl:output message="tns:CTranDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CAllDetail">
+      <wsdl:input message="tns:CAllDetailSoapIn" />
+      <wsdl:output message="tns:CAllDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CAllDetailEx">
+      <wsdl:input message="tns:CAllDetailExSoapIn" />
+      <wsdl:output message="tns:CAllDetailExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CAllGiftDetail">
+      <wsdl:input message="tns:CAllGiftDetailSoapIn" />
+      <wsdl:output message="tns:CAllGiftDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditTransaction">
+      <wsdl:input message="tns:CreditTransactionSoapIn" />
+      <wsdl:output message="tns:CreditTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GiftTransaction">
+      <wsdl:input message="tns:GiftTransactionSoapIn" />
+      <wsdl:output message="tns:GiftTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoyaltyTransaction">
+      <wsdl:input message="tns:LoyaltyTransactionSoapIn" />
+      <wsdl:output message="tns:LoyaltyTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssociateAccount">
+      <wsdl:input message="tns:AssociateAccountSoapIn" />
+      <wsdl:output message="tns:AssociateAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAccountAssociation">
+      <wsdl:input message="tns:RemoveAccountAssociationSoapIn" />
+      <wsdl:output message="tns:RemoveAccountAssociationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Lookup">
+      <wsdl:input message="tns:LookupSoapIn" />
+      <wsdl:output message="tns:LookupSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsSoap" type="tns:wsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CBatch">
+      <soap:operation soapAction="http://www.mercurypay.com/CBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllowRunAsDebit">
+      <soap:operation soapAction="http://www.mercurypay.com/AllowRunAsDebit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CTranDetail">
+      <soap:operation soapAction="http://www.mercurypay.com/CTranDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CAllDetail">
+      <soap:operation soapAction="http://www.mercurypay.com/CAllDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CAllDetailEx">
+      <soap:operation soapAction="http://www.mercurypay.com/CAllDetailEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CAllGiftDetail">
+      <soap:operation soapAction="http://www.mercurypay.com/CAllGiftDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditTransaction">
+      <soap:operation soapAction="http://www.mercurypay.com/CreditTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiftTransaction">
+      <soap:operation soapAction="http://www.mercurypay.com/GiftTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoyaltyTransaction">
+      <soap:operation soapAction="http://www.mercurypay.com/LoyaltyTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssociateAccount">
+      <soap:operation soapAction="http://www.mercurypay.com/AssociateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAccountAssociation">
+      <soap:operation soapAction="http://www.mercurypay.com/RemoveAccountAssociation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lookup">
+      <soap:operation soapAction="http://www.mercurypay.com/Lookup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws">
+    <wsdl:port name="wsSoap" binding="tns:wsSoap">
+      <soap:address location="https://w1.mercurydev.net/ws/ws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

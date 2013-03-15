@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.IO;
+using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace WSPAPIPrototype
 {
     public  class Payment : IProcess
     {
-
         public void Process()
         {
             PostTransaction();
@@ -18,7 +19,6 @@ namespace WSPAPIPrototype
             PostBatch();
             GetBatch();
         }
-
 
         /// <summary>
         /// Delete an individual Transaction: Reversal/Void?
@@ -52,8 +52,7 @@ namespace WSPAPIPrototype
 
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-
-                string json = "{\"IpAddress\":\"1.1.1.1\",\"IpPort\":\"80\", \"MerchantId\":\"1234\", \"TerminalId\":\"1234\", \"OperatorId\":\"123\",\"TranCode\":\"0\", \"SequenceNo\":\"5499****\",\"TerminalName\":\"69\",\"ShiftId\":\"12345\",\"Signature\":\"Sig\"}";
+                string json = new PostBatch().GetJson();
 
                 streamWriter.Write(json);
                 streamWriter.Flush();
@@ -63,8 +62,15 @@ namespace WSPAPIPrototype
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     result = streamReader.ReadToEnd();
+                    Trace.WriteLine(result);
                 }
             }
+
+            #region JSON Deserialization
+            //Put a break point here and checkout the RootObject data. 
+            PostBatch ro = Newtonsoft.Json.JsonConvert.DeserializeObject<PostBatch>(result);
+            #endregion
+
         }
 
 
@@ -89,7 +95,7 @@ namespace WSPAPIPrototype
         /// <summary>
         /// Get an individual tender transaction
         /// </summary>
-        private static void GetTransaction()
+        public static void GetTransaction()
         {
             //TODO https://github.com/mozvat/WSPAPIPrototype/issues/8
             var result = string.Empty;
@@ -108,7 +114,7 @@ namespace WSPAPIPrototype
         /// <summary>
         /// Post an individual tender transaction
         /// </summary>
-        private static void PostTransaction()
+        public static void PostTransaction()
         {
             //TODO https://github.com/mozvat/WSPAPIPrototype/issues/6
             var result = string.Empty;
@@ -118,8 +124,14 @@ namespace WSPAPIPrototype
 
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-
-                string json = "{\"TransactionId\":\"0\",\"OperatorId\":\"0\", \"TranType\":\"Credit\", \"TranCode\":\"Sale\", \"InvoiceNo\":\"123\",\"RefNo\":\"0\", \"Account\":\"5499****\",\"Amount\":\"69\",\"EXPDate\":\"MMYY\",\"CVV\":\"123\",\"AVS\":\"1 East 6th Avenue\"}";
+                Card pt = new WSPAPIPrototype.Card();
+                pt.Account = "Track 2 swipe";
+                pt.Amount = "4.00";
+                pt.InvoiceNo = "1234";
+                pt.TranType = "Credit";
+                pt.TranCode = "Sale";
+            
+                string json = pt.GetJson();
 
                 streamWriter.Write(json);
                 streamWriter.Flush();
@@ -129,14 +141,129 @@ namespace WSPAPIPrototype
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     result = streamReader.ReadToEnd();
+                    Trace.WriteLine(result);
                 }
             }
 
             #region JSON Deserialization
             //Put a break point here and checkout the RootObject data. 
-            RootObject ro = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(result);
+            Card ro = Newtonsoft.Json.JsonConvert.DeserializeObject<Card>(result);
             #endregion
         }
+
+        public static void PostPayPal()
+        {
+            //TODO https://github.com/mozvat/WSPAPIPrototype/issues/6
+            var result = string.Empty;
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a");
+            httpWebRequest.ContentType = "text/json";
+            httpWebRequest.Method = "POST";
+
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                AlternativePayment pt = new WSPAPIPrototype.AlternativePayment();
+                pt.MobilePhone = "blah";
+                pt.PicID = "binary crap";
+
+                string json = pt.GetJson();
+
+                streamWriter.Write(json);
+                streamWriter.Flush();
+                streamWriter.Close();
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    result = streamReader.ReadToEnd();
+                    Trace.WriteLine(result);
+                }
+            }
+
+            #region JSON Deserialization
+            //Put a break point here and checkout the RootObject data. 
+            Card ro = Newtonsoft.Json.JsonConvert.DeserializeObject<Card>(result);
+            #endregion
+        }
+    }
+
+
+
+
+    public class PostBatch
+    {
+            public string IpAddress { get; set; }
+            public string IpPort { get; set; }
+            public string MerchantId { get; set; }
+            public string TerminalId { get; set; }
+            public string OperatorId { get; set; }
+            public string TranCode { get; set; }
+            public string SequenceNo { get; set; }
+            public string TerminalName { get; set; }
+            public string ShiftId { get; set; }
+            public string Signature { get; set; }
+
+            /// <summary>
+            /// Gets the json.
+            /// </summary>
+            /// <returns></returns>
+            public string GetJson()
+            {
+                return JsonConvert.SerializeObject(this, Formatting.None,
+                                                   new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+            }   
+    }
+
+    //API.MPS.com/Transaction
+
+
+
+    public class AlternativePayment
+    {
+        public string PicID { get; set; }
+        public string MobilePhone { get; set; }
+        public string TranType { get; set; }  //PayPal, DWOLLA, 
+        public string TranCode { get; set; }  //GetID,Sale
+        /// <summary>
+        /// Gets the json.
+        /// </summary>
+        /// <returns></returns>
+        public string GetJson()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.None,
+                                               new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+        } 
+    }
+
+
+
+    //http://mercuryrestapi.azurewebsites.net/api/payments/Transactions?customerid=12345&timestamp=50394852&hash=3a23fb806103fb33d8518c7f505232674976217a
+
+    //http://mercuryrestapi.azurewebsites.net/api/payments/Transactions/Credit/Sale/?
+    //http://mercuryrestapi.azurewebsites.net/api/payments/Transactions
+
+   
+
+    public class Card
+    {
+        public string TranType { get; set; }  //Credit/Gift/Loyalty/Debit/
+        public string TranCode { get; set; }  //Sale/Void/Return/Add/Subtract/Redeem/Issue/
+        public string InvoiceNo { get; set; }
+        public string Account { get; set; }
+        public string Amount { get; set; }
+        //Are for keyed entry
+        public string EXPDate { get; set; }
+        public string CVV { get; set; }
+        public string AVS { get; set; }
+
+        /// <summary>
+        /// Gets the json.
+        /// </summary>
+        /// <returns></returns>
+        public string GetJson()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.None,
+                                               new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+        }     
     }
 
     public class RootObject
