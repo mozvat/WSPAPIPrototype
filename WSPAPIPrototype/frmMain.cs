@@ -37,7 +37,7 @@ namespace WSPAPIPrototype
 
         private void btnLoyalty_Click(object sender, EventArgs e)
         {
-
+            //TEST TEST adding comments for checkin test with GitHub
         }
 
         private void btnGift_Click(object sender, EventArgs e)
